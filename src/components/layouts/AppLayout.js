@@ -17,20 +17,22 @@ export default class AppLayout extends Component {
         return (
             <div className='container'>
                 <Header />
-                <Tabs value={this.state.value} onChange={this.onchangetab} >
-                    <Tab label='home'>
-                        
-                    </Tab>
-                    <Tab label='about'>
-                      
-                    </Tab>
-                    <Tab label='contact us'>
-                      
-                    </Tab>
-                </Tabs>
-                {this.props.children}
+                <div className='row'>
+                    <Tabs value={this.state.value} onChange={this.onchangetab} >
+                        {['home','about','contact us'].map(
+                            (menuItem)=>
+                            <Tab
+                            style={{fontSize:'2em'}}
+                            label={menuItem}>
+                            </Tab>
+                            )
+                        }
+                    </Tabs>
+                </div>
+                <img class='img-fluid' style={{width:'100%'}} src='../../assets/img/banner.jpg' />
+                
                 <Footer />
             </div>
         )
-    }
+    } 
 }
