@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import {IndexRoute, Router, Route, browserHistory } from 'react-router';
 import AppLayout from './components/layouts/AppLayout';
 
-const defaultApp = (props) => {
-  return (<div>{props.children}</div>)
+const ContactUs = (props) => {
+  return (<h1>Contact Us</h1>)
+};
+const AboutUs = ContactUs;
+const Gallery = AboutUs;
+
+const Banner = (props)=>{
+  return (
+    <img className='img-fluid' style={{ width: '100%' }} src='../../assets/img/banner.jpg' />
+  )
 }
 
 class App extends Component {
@@ -11,10 +19,12 @@ class App extends Component {
     return (
       <div>
         <Router history={browserHistory}>
-          <Route path="/" component={defaultApp}>
-          {/* <Route path='login' component> */}
-            <Route path="home" component={AppLayout}/>
-            <Route path="contact" component={AppLayout}/>
+          <Route path="/" component={AppLayout}>
+            <IndexRoute component={Banner} />
+            <Route path="home" component={Banner} />
+            <Route path="aboutus" component={AboutUs} />
+            <Route path="contactus" component={ContactUs} />
+            <Route path="gallery" component={Gallery} />
           </Route>
         </Router>
       </div>

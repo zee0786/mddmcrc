@@ -5,7 +5,7 @@ import SearchBar from '../composite/SearchBar';
 export default class Header extends Component{
     render(){
         return (
-            <header className='row' style={{background:'#4A234F'}}>
+            <header className={`row ${this.props.wrapperClass}`} style={{background:'#4A234F'}}>
                 <div className='col-sm-4 col-md-2 text-center'>
                     <img style={{width:'100px'}} src="../../assets/img/logo.png" />
                 </div>
