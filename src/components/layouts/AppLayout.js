@@ -1,34 +1,54 @@
 import React, { Component } from 'react';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import { browserHistory as history } from 'react-router';
 import Header from './Header';
 import Footer from './Footer';
 
 export default class AppLayout extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.onchangetab = this.onchangetab.bind(this);
-        this.state={value:0}
+        this.state = { value: 0 }
+        this.tabClick = this.tabClick.bind(this);
     }
-    onchangetab(event,value){
-    this.setState({value})
+
+    tabClick(path) {
+        history.push('/' + path)
     }
+
+    onchangetab(event, value) {
+        this.setState({ value })
+    }
+
     render() {
         return (
-            <div className='container'>
-                <Header />
-                <Tabs value={this.state.value} onChange={this.onchangetab} >
-                    <Tab label='home'>
-                        
-                    </Tab>
-                    <Tab label='about'>
-                      
-                    </Tab>
-                    <Tab label='contact us'>
-                      
-                    </Tab>
-                </Tabs>
-                {this.props.children}
+            <div>
+                <div className="container">
+                    <Header wrapperClass="" />
+                    <div className="row">
+                        <Tabs value={this.state.value} className="tabWrapper" onChange={this.onchangetab} fullWidth centered >
+                            {
+                                [{ label: 'home', path: 'home' },
+                                { label: 'about us', path: 'aboutus' },
+                                { label: 'contact us', path: 'contactus' },
+                                { label: 'gallery', path: 'gallery' }
+                                ].map(
+                                    (menuItem) =>
+                                        <Tab
+                                            style={{ backgroundColor: '#d4ccd6' }}
+                                            label={menuItem.label}
+                                            onClick={() => this.tabClick(menuItem.path)}
+                                        >
+                                        </Tab>
+                                )
+                            }
+                        </Tabs>
+                    </div>
+                    <div class="row">
+                        {this.props.children}
+                    </div>
+                </div>
                 <Footer />
             </div>
         )
