@@ -4,7 +4,7 @@ export default class Footer extends Component{
     render(){
         return (
             <footer style={{
-                position:'absolute',
+                position:'fixed',
                 bottom:0,
                 backgroundColor:"#4A234F",
                 color:'wheat',
