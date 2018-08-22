@@ -23,29 +23,31 @@ export default class AppLayout extends Component {
 
     render() {
         return (
-            <div className="container">
-                <Header wrapperClass="" />
-                <div className="row">
-                    <Tabs value={this.state.value} className="tabWrapper" onChange={this.onchangetab} fullWidth centered >
-                        {
-                            [{ label: 'home', path: 'home' },
-                            { label: 'about us', path: 'aboutus' },
-                            { label: 'contact us', path: 'contactus' },
-                            { label: 'gallery', path: 'gallery' }
-                            ].map(
-                                (menuItem) =>
-                                    <Tab
-                                        style={{ backgroundColor: '#d4ccd6' }}
-                                        label={menuItem.label}
-                                        onClick={() => this.tabClick(menuItem.path)}
-                                    >
-                                    </Tab>
-                            )
-                        }
-                    </Tabs>
-                </div>
-                <div class="row">
-                    {this.props.children}
+            <div>
+                <div className="container">
+                    <Header wrapperClass="" />
+                    <div className="row">
+                        <Tabs value={this.state.value} className="tabWrapper" onChange={this.onchangetab} fullWidth centered >
+                            {
+                                [{ label: 'home', path: 'home' },
+                                { label: 'about us', path: 'aboutus' },
+                                { label: 'contact us', path: 'contactus' },
+                                { label: 'gallery', path: 'gallery' }
+                                ].map(
+                                    (menuItem) =>
+                                        <Tab
+                                            style={{ backgroundColor: '#d4ccd6' }}
+                                            label={menuItem.label}
+                                            onClick={() => this.tabClick(menuItem.path)}
+                                        >
+                                        </Tab>
+                                )
+                            }
+                        </Tabs>
+                    </div>
+                    <div class="row">
+                        {this.props.children}
+                    </div>
                 </div>
                 <Footer />
             </div>

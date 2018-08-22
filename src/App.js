@@ -17,7 +17,6 @@ const Banner = (props)=>{
 class App extends Component {
   render() {
     return (
-      <div>
         <Router history={browserHistory}>
           <Route path="/" component={AppLayout}>
             <IndexRoute component={Banner} />
@@ -27,7 +26,6 @@ class App extends Component {
             <Route path="gallery" component={Gallery} />
           </Route>
         </Router>
-      </div>
     );
   }
 }
