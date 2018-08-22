@@ -39,13 +39,14 @@ export default class AppLayout extends Component {
                                             style={{ backgroundColor: '#d4ccd6' }}
                                             label={menuItem.label}
                                             onClick={() => this.tabClick(menuItem.path)}
+                                            key={menuItem.path}
                                         >
                                         </Tab>
                                 )
                             }
                         </Tabs>
                     </div>
-                    <div class="row">
+                    <div className="row">
                         {this.props.children}
                     </div>
                 </div>
