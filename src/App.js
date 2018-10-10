@@ -10,7 +10,7 @@ const Gallery = AboutUs;
 
 const Banner = (props)=>{
   return (
-    <img className='img-fluid' style={{ width: '100%' }} src='../../assets/img/banner.jpg' />
+    <img alt="banner" className='img-fluid' style={{ width: '100%' }} src='../../assets/img/banner.jpg' />
   )
 }
 

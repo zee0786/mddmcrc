@@ -27,16 +27,20 @@ export default class AppLayout extends Component {
                 <div className="container">
                     <Header wrapperClass="" />
                     <div className="row">
-                        <Tabs value={this.state.value} className="tabWrapper" onChange={this.onchangetab} fullWidth centered >
+                        <Tabs value={this.state.value}
+                            onChange={this.onchangetab}
+                            fullWidth centered >
                             {
                                 [{ label: 'home', path: 'home' },
                                 { label: 'about us', path: 'aboutus' },
-                                { label: 'contact us', path: 'contactus' },
-                                { label: 'gallery', path: 'gallery' }
+                                { label: 'courses', path: 'courses' },
+                                { label: 'gallery', path: 'gallery' },
+                                { label: 'contact us', path: 'contactus' }
                                 ].map(
                                     (menuItem) =>
                                         <Tab
                                             style={{ backgroundColor: '#d4ccd6' }}
+                                            classes={{ label : {fontSize: 16} }}
                                             label={menuItem.label}
                                             onClick={() => this.tabClick(menuItem.path)}
                                             key={menuItem.path}
