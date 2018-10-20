@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import {IndexRoute, Router, Route, browserHistory } from 'react-router';
 import AppLayout from './components/layouts/AppLayout';
+import { Gallery } from './components/layouts/Gallery';
+import { AboutUs } from './components/layouts/AboutUs';
+import { Courses } from './components/layouts/Courses';
 
-const ContactUs = (props) => {
-  return (<h1>Contact Us</h1>)
-};
-const AboutUs = ContactUs;
-const Gallery = AboutUs;
+const ContactUs = AboutUs
 
 const Banner = (props)=>{
   return (
@@ -24,7 +23,7 @@ class App extends Component {
             <Route path="aboutus" component={AboutUs} />
             <Route path="contactus" component={ContactUs} />
             <Route path="gallery" component={Gallery} />
-            <Route path="courses" component={Gallery} />
+            <Route path="courses" component={Courses} />
           </Route>
         </Router>
     );
