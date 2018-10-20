@@ -40,7 +40,7 @@ export default class AppLayout extends Component {
                                     (menuItem) =>
                                         <Tab
                                             style={{ backgroundColor: '#d4ccd6' }}
-                                            classes={{ label : {fontSize: 16} }}
+                                            classes={{ label: 'tabLabel' }}
                                             label={menuItem.label}
                                             onClick={() => this.tabClick(menuItem.path)}
                                             key={menuItem.path}
