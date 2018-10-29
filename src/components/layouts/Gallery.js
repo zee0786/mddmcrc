@@ -1,7 +1,6 @@
 import React from 'react'
 import Paper from '@material-ui/core/Paper'
 
-
 export class Gallery extends React.Component {
     render() {
         const images = [
