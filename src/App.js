@@ -3,9 +3,8 @@ import {IndexRoute, Router, Route, browserHistory } from 'react-router';
 import AppLayout from './components/layouts/AppLayout';
 import { Gallery } from './components/layouts/Gallery';
 import { AboutUs } from './components/layouts/AboutUs';
+import { ContactUs } from './components/layouts/ContactUs';
 import { Courses } from './components/layouts/Courses';
-
-const ContactUs = AboutUs
 
 const Banner = (props)=>{
   return (
