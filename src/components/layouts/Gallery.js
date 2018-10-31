@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper'
 export class Gallery extends React.Component {
     render() {
         const images = [
-            { path: 'pic1.jpg' }, { path: 'pic2.jpg' }, { path: 'pic3.jpeg' }, { path: 'pic4.jpeg' }
+            { path: 'pic1.jpg' }, { path: 'pic2.jpg' }, { path: 'pic3.jpeg' }
         ]
         return <div
                 style={{
