@@ -12,7 +12,7 @@ export default class Header extends Component {
                     </a>
                 </div>
                 <div className='col-sm-6 col-md-10 text-center'>
-                    <h3 style={{ color: 'white' }}>MDD Medical College &amp; Research Center</h3>
+                    <h1 style={{ color: 'white' }}>MDD Medical College &amp; Research Center</h1>
                 </div>
             </header>
         )
